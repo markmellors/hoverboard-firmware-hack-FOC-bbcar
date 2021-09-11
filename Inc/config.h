@@ -355,6 +355,9 @@
   #define ACC_BACKWARDS_M4 0.8
 
   #define DEBUG_SERIAL_USART3       // right sensor cable debug
+
+  #define INVERT_R_DIRECTION            // Invert right motor
+  #define INVERT_L_DIRECTION            // Invert left motor
 #endif
 
 // ############################## END OF VARIANT BBCAR ##############################
