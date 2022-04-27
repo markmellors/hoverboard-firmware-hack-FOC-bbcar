@@ -873,9 +873,10 @@ void cruiseControl(uint8_t button) {
                 - brk_cmd * ACC_BACKWARDS_M3*5.0;  // accelerating backwards
 
       } else if (drive_mode == 4) {  // Mode 4: without fw: 21 km/h@12s, with fw: 30 km/h@12s
-        if(acc_cmd > 0.8 & brk_cmd > 0.8 & speedRL > 0.7 * (float)INPUT_MAX){  // fahrzeug schnell, gas und bremse voll gedrueckt: field weakening
+        if(acc_cmd > 0.8 & speedRL > 0.7 * (float)INPUT_MAX){  // fahrzeug schnell, gas und bremse voll gedrueckt: field weakening
           speedRL = speedRL * (1.0 - (speedRL > 0 ? ACC_FORWARDS_M4/MAX_SPEED_FORWARDS_M4*5.0 : ACC_BACKWARDS_M4/MAX_SPEED_BACKWARDS_M4*5.0))  // breaking if poti is not pressed
-                  + acc_cmd * ACC_FORWARDS_M4*5.0;  // accelerating forwards
+                  + acc_cmd * ACC_FORWARDS_M4*5.0  // accelerating forwards
+                  - brk_cmd * ACC_BACKWARDS_M4*5.0;  // accelerating backwards
           weak = weak * 0.95 + 500.0 * 0.05;  // sanftes hinzuschalten des field weakening
         } else {  // nur gas gedrueckt: normale fahrt ohne field weakening
           speedRL = speedRL * (1.0 - (speedRL > 0 ? ACC_FORWARDS_M4/MAX_SPEED_FORWARDS_M4*5.0 : ACC_BACKWARDS_M4/MAX_SPEED_BACKWARDS_M4*5.0))  // breaking if poti is not pressed

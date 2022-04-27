@@ -158,7 +158,7 @@
 
 // Field Weakening / Phase Advance
 #define FIELD_WEAK_ENA  1               // [-] Field Weakening / Phase Advance enable flag: 0 = Disabled (default), 1 = Enabled
-#define FIELD_WEAK_MAX  3               // [A] Maximum Field Weakening D axis current (only for FOC). Higher current results in higher maximum speed. Up to 10A has been tested using 10" wheels.
+#define FIELD_WEAK_MAX  6               // [A] Maximum Field Weakening D axis current (only for FOC). Higher current results in higher maximum speed. Up to 10A has been tested using 10" wheels.
 #define PHASE_ADV_MAX   25              // [deg] Maximum Phase Advance angle (only for SIN). Higher angle results in higher maximum speed.
 #define FIELD_WEAK_HI   1500            // (1000, 1500] Input target High threshold for reaching maximum Field Weakening / Phase Advance. Do NOT set this higher than 1500.
 #define FIELD_WEAK_LO   1000             // ( 500, 1000] Input target Low threshold for starting Field Weakening / Phase Advance. Do NOT set this higher than 1000.
@@ -334,9 +334,9 @@
   // #define ADC_ALTERNATE_CONNECT           // use to swap ADC inputs (left and right. best practise is to swap cables and to use the same config on both boards.)
 
   // Here you can tune the speeds and accelerations of the 4 modes:
-  #define MAX_SPEED_FORWARDS_M1 130  // speed_calculator.ods
-  #define ACC_FORWARDS_M1 0.8
-  #define MAX_SPEED_BACKWARDS_M1 90
+  #define MAX_SPEED_FORWARDS_M1 1000  // speed_calculator.ods
+  #define ACC_FORWARDS_M1 1
+  #define MAX_SPEED_BACKWARDS_M1 300
   #define ACC_BACKWARDS_M1 0.8
 
   #define MAX_SPEED_FORWARDS_M2 280
