@@ -334,14 +334,14 @@
   // #define ADC_ALTERNATE_CONNECT           // use to swap ADC inputs (left and right. best practise is to swap cables and to use the same config on both boards.)
 
   // Here you can tune the speeds and accelerations of the 4 modes:
-  #define MAX_SPEED_FORWARDS_M1 1000  // speed_calculator.ods
-  #define ACC_FORWARDS_M1 1
-  #define MAX_SPEED_BACKWARDS_M1 300
+  #define MAX_SPEED_FORWARDS_M1 130  // speed_calculator.ods
+  #define ACC_FORWARDS_M1 0.8
+  #define MAX_SPEED_BACKWARDS_M1 90
   #define ACC_BACKWARDS_M1 0.8
 
-  #define MAX_SPEED_FORWARDS_M2 280
-  #define ACC_FORWARDS_M2 0.8
-  #define MAX_SPEED_BACKWARDS_M2 190
+  #define MAX_SPEED_FORWARDS_M2 1000
+  #define ACC_FORWARDS_M2 1
+  #define MAX_SPEED_BACKWARDS_M2 300
   #define ACC_BACKWARDS_M2 0.8
 
   #define MAX_SPEED_FORWARDS_M3 540
